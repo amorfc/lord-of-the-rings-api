@@ -1,4 +1,4 @@
-package com.example.lord_of_the_rings_api.Activity.BooksActivity
+package com.example.lord_of_the_rings_api.view.BooksActivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
