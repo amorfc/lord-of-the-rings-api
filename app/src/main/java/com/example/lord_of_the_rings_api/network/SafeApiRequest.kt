@@ -1,7 +1,5 @@
 package com.example.lord_of_the_rings_api.network
 
-import com.example.lord_of_the_rings_api.network.models.BookModel
-import retrofit2.Call
 import retrofit2.Response
 import java.io.IOException
 
