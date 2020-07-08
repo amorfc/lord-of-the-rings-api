@@ -11,21 +11,12 @@ import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface LotrApi {
+interface WebServiceLotrApi {
 
     @GET("book")
-    suspend fun getAllBooksFromApi():Response<ApiRes>
+    fun getAllBooksFromApi():Call<ApiRes>
 
     @GET("book/{book_id}")
-    suspend fun getSpecificBook(@Path("book_id") book_id:String):Response<Book>
+    fun getSpecificBook(@Path("book_id") book_id:String):Call<Book>
 
-    companion object{
-        operator fun invoke(): LotrApi {
-            return Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(Constants.base_Url)
-                .build()
-                .create(LotrApi::class.java)
-        }
-    }
 }
