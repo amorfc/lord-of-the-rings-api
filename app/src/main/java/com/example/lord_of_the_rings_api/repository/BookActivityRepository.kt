@@ -1,12 +1,10 @@
 package com.example.lord_of_the_rings_api.repository
 
-import androidx.lifecycle.LiveData
-import com.example.lord_of_the_rings_api.network.models.Book
+import com.example.lord_of_the_rings_api.network.LotrApi
+import com.example.lord_of_the_rings_api.network.SafeApiRequest
 
-class BookActivityRepository {
-
-    fun getAllBooks():LiveData<List<Book>>{
-
-    }
-
+class BookActivityRepository(
+    private val api:LotrApi
+):SafeApiRequest(){
+    suspend fun getMovies()= apiRequest { api.getBooks() }
 }
