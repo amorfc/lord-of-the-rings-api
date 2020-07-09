@@ -1,19 +1,18 @@
-package com.example.lord_of_the_rings_api.repository
+package com.example.lord_of_the_rings_api.service.repository
 
-import android.os.Handler
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.lord_of_the_rings_api.model.ApiRes
-import com.example.lord_of_the_rings_api.model.Book
-import com.example.lord_of_the_rings_api.network.ApiServiceBuilder
-import com.example.lord_of_the_rings_api.network.WebServiceLotrApi
+import com.example.lord_of_the_rings_api.service.model.ApiRes
+import com.example.lord_of_the_rings_api.service.model.Book
+import com.example.lord_of_the_rings_api.service.repository.LotrApiService.WebServiceLotrApi
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class BooksRepository {
-    private val  webService: WebServiceLotrApi = ApiServiceBuilder.buildService(WebServiceLotrApi::class.java)
+    private val  webService: WebServiceLotrApi = ApiServiceBuilder.buildService(
+        WebServiceLotrApi::class.java)
 
     fun getBooksList():LiveData<List<Book>>{
         var data = MutableLiveData<List<Book>>()

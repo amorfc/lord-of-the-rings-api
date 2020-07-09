@@ -1,4 +1,4 @@
-package com.example.lord_of_the_rings_api.view.BooksActivity
+package com.example.lord_of_the_rings_api.view.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -6,10 +6,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lord_of_the_rings_api.R
-import com.example.lord_of_the_rings_api.model.Book
-import com.example.lord_of_the_rings_api.repository.BooksRepository
+import com.example.lord_of_the_rings_api.service.model.Book
 import com.example.lord_of_the_rings_api.view.BaseActivity
-import com.example.lord_of_the_rings_api.view.adapter.denemeAdapter
+import com.example.lord_of_the_rings_api.view.adapter.BookListAdapter
 import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
 import kotlinx.android.synthetic.main.activity_books.*
 
@@ -32,7 +31,7 @@ class BooksActivity : BaseActivity() {
                    booksRcy.also {
                        it.layoutManager = LinearLayoutManager(baseContext)
                        it.setHasFixedSize(true)
-                       it.adapter = denemeAdapter(books)
+                       it.adapter = BookListAdapter(books)
                    }
                 }
             }

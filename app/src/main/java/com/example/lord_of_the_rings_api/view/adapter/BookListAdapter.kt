@@ -6,21 +6,20 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.databinding.BooksRecyclerViewItemBinding
-import com.example.lord_of_the_rings_api.model.Book
-import kotlinx.android.synthetic.main.activity_books.view.*
+import com.example.lord_of_the_rings_api.service.model.Book
 
-class denemeAdapter (
+class BookListAdapter (
     private val books : List<Book>
-):RecyclerView.Adapter<denemeAdapter.denemeViewHolder>(){
+):RecyclerView.Adapter<BookListAdapter.BookListAdapterViewHolder>(){
 
-    inner class denemeViewHolder (
+    inner class BookListAdapterViewHolder (
         val recyclerViewdenemeBinding : BooksRecyclerViewItemBinding
     ):RecyclerView.ViewHolder(recyclerViewdenemeBinding.root){
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        denemeViewHolder(
+        BookListAdapterViewHolder(
             DataBindingUtil.inflate(
                 LayoutInflater.from(parent.context),
                 R.layout.books_recycler_view_item,
@@ -31,7 +30,7 @@ class denemeAdapter (
 
     override fun getItemCount() = books.size
 
-    override fun onBindViewHolder(holder: denemeViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: BookListAdapterViewHolder, position: Int) {
         holder.recyclerViewdenemeBinding.book = books[position]
     }
 }

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="book"
-            type="com.example.lord_of_the_rings_api.model.Book" />
+            type="com.example.lord_of_the_rings_api.service.model.Book" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
