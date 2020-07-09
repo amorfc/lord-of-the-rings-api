@@ -3,10 +3,10 @@ package com.example.lord_of_the_rings_api.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.service.model.Book
+import kotlinx.android.synthetic.main.books_recycler_view_item.view.*
 
 class BooksAdapter(var booksList:List<Book>):RecyclerView.Adapter<BooksAdapter.ViewHolder>(){
 
@@ -29,10 +29,11 @@ class BooksAdapter(var booksList:List<Book>):RecyclerView.Adapter<BooksAdapter.V
     }
 
     class ViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val booksname :TextView = itemView.findViewById(R.id.books_name_tv)
 
         fun bind(item : Book){
-            booksname.text = item.name
+            with(itemView){
+                books_name_tv.text = item.name
+            }
         }
 
         companion object {

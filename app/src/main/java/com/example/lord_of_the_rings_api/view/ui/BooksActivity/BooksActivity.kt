@@ -20,8 +20,8 @@ class BooksActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
 
-        val booksViewModel = ViewModelProvider(this).get(BooksListViewModel::class.java)
-        observeViewModel(booksViewModel)
+        val booksListViewModel = ViewModelProvider(this).get(BooksListViewModel::class.java)
+        observeViewModel(booksListViewModel)
     }
     private fun observeViewModel(viewModel: BooksListViewModel){
         viewModel.getBooksListObservable().observe(this, object : Observer<List<Book>>{

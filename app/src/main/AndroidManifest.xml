@@ -13,9 +13,9 @@
         android:theme="@style/AppTheme">
         <activity android:name="com.example.lord_of_the_rings_api.view.ui.CharactersActivity.CharactersActivity"></activity>
         <activity android:name=".view.BaseActivity" />
-        <activity android:name="com.example.lord_of_the_rings_api.view.ui.MoviesActivity.MoviesActivity" />
+        <activity android:name="com.example.lord_of_the_rings_api.view.ui.BooksActivity.BooksActivity" />
         <activity android:name="com.example.lord_of_the_rings_api.view.ui.HomeActivity.HomeActivity" />
-        <activity android:name="com.example.lord_of_the_rings_api.view.ui.BooksActivity.BooksActivity">
+        <activity android:name="com.example.lord_of_the_rings_api.view.ui.MoviesActivity.MoviesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
