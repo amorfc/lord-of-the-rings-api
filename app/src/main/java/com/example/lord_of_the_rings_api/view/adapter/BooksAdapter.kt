@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lord_of_the_rings_api.R
-import com.example.lord_of_the_rings_api.model.Book
+import com.example.lord_of_the_rings_api.service.model.Book
 
 class BooksAdapter(var booksList:List<Book>):RecyclerView.Adapter<BooksAdapter.ViewHolder>(){
 

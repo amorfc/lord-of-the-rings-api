@@ -6,8 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.databinding.BooksRecyclerViewItemBinding
-import com.example.lord_of_the_rings_api.model.Book
-import kotlinx.android.synthetic.main.activity_books.view.*
+import com.example.lord_of_the_rings_api.service.model.Book
 
 class denemeAdapter (
     private val books : List<Book>

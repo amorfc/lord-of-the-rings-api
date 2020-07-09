@@ -1,4 +1,4 @@
-package com.example.lord_of_the_rings_api.network
+package com.example.lord_of_the_rings_api.service.network
 
 import com.example.lord_of_the_rings_api.utils.Constants
 import okhttp3.OkHttpClient
