@@ -9,6 +9,7 @@ import com.example.lord_of_the_rings_api.model.Book
 import com.example.lord_of_the_rings_api.repository.BooksRepository
 import com.example.lord_of_the_rings_api.view.BaseActivity
 import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
+import kotlinx.android.synthetic.main.activity_books.*
 
 class BooksActivity : BaseActivity() {
 
@@ -26,6 +27,7 @@ class BooksActivity : BaseActivity() {
             override fun onChanged(books: List<Book>?) {
                 books?.let{
                     Log.e("Results",it.toString())
+                    
                 }
             }
 

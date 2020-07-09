@@ -8,9 +8,11 @@ import com.example.lord_of_the_rings_api.repository.BooksRepository
 
 
 class BooksListViewModel(application: Application) : AndroidViewModel(application) {
-
-        var _books  : LiveData<List<Book>> = BooksRepository().getBooksList()
+        var books  : LiveData<List<Book>>
+        init {
+            books= BooksRepository().getBooksList()
+        }
         fun getBooksListObservable(): LiveData<List<Book>>{
-                return _books
+                return books
         }
 }
