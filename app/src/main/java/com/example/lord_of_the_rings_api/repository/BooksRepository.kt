@@ -1,5 +1,6 @@
 package com.example.lord_of_the_rings_api.repository
 
+import android.os.Handler
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,21 +15,26 @@ import retrofit2.Response
 class BooksRepository {
     private val  webService: WebServiceLotrApi = ApiServiceBuilder.buildService(WebServiceLotrApi::class.java)
 
-    fun getAllBooksRes():LiveData<List<Book>>{
-        val data = MutableLiveData<List<Book>>()
+    fun getBooksList():LiveData<List<Book>>{
+        var data = MutableLiveData<List<Book>>()
+
         webService.getAllBooksFromApi().enqueue(object :Callback<ApiRes>{
             override fun onFailure(call: Call<ApiRes>, t: Throwable) {
-
                 Log.e("Something Went Wrong",t.toString())
             }
-
             override fun onResponse(call: Call<ApiRes>, response: Response<ApiRes>) {
                 if (response.isSuccessful){
-                    data.value = response.body()!!.docs
+                    data.value = response.body()?.docs
+                    responseData = data
                 }
             }
 
         })
+
         return data
+    }
+
+    companion object {
+        var responseData = MutableLiveData<List<Book>>()
     }
 }
