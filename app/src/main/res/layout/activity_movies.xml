@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ui.MoviesActivity.MoviesActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/moviesRcy"
+    <fragment
+        android:id="@+id/moviesListFragment"
+        android:name="com.example.lord_of_the_rings_api.view.ui.MoviesActivity.MoviesListFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"/>
+</LinearLayout>

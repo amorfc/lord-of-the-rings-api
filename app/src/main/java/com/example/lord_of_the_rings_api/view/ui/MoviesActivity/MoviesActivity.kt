@@ -17,10 +17,12 @@ class MoviesActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
-        var moviesListViewModel = ViewModelProvider(this).get(MoviesListViewModel::class.java)
-        observeViewModel(moviesListViewModel)
+        //var moviesListViewModel = ViewModelProvider(this).get(MoviesListViewModel::class.java)
+        //observeViewModel(moviesListViewModel)
     }
-    fun observeViewModel(moviesListViewModel: MoviesListViewModel) {
+    /*
+
+        fun observeViewModel(moviesListViewModel: MoviesListViewModel) {
         moviesListViewModel.getMovieListObservable().observe(this,object : Observer<List<Movie>>{
             override fun onChanged(movies: List<Movie>?) {
                 movies?.let {
@@ -33,4 +35,6 @@ class MoviesActivity : BaseActivity() {
             }
         })
     }
+    * */
+
 }
