@@ -1,10 +1,8 @@
-package com.example.lord_of_the_rings_api.view.ui.BooksActivity
+package com.example.lord_of_the_rings_api.view.ui.books
 
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.view.BaseActivity
-import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
 
 class BooksActivity : BaseActivity() {
 

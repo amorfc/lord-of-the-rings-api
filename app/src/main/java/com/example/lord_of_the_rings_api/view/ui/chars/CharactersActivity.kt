@@ -1,4 +1,4 @@
-package com.example.lord_of_the_rings_api.view.ui.CharactersActivity
+package com.example.lord_of_the_rings_api.view.ui.chars
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

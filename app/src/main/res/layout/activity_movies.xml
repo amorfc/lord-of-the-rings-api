@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ui.MoviesActivity.MoviesActivity">
+    tools:context=".view.ui.movies.MoviesActivity">
 
     <fragment
         android:id="@+id/moviesListFragment"
-        android:name="com.example.lord_of_the_rings_api.view.ui.MoviesActivity.MoviesListFragment"
+        android:name="com.example.lord_of_the_rings_api.view.ui.movies.MoviesListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>

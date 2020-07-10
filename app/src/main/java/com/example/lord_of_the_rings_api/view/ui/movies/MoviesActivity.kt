@@ -1,16 +1,8 @@
-package com.example.lord_of_the_rings_api.view.ui.MoviesActivity
+package com.example.lord_of_the_rings_api.view.ui.movies
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lord_of_the_rings_api.R
-import com.example.lord_of_the_rings_api.service.model.Movie
 import com.example.lord_of_the_rings_api.view.BaseActivity
-import com.example.lord_of_the_rings_api.view.adapter.MoviesAdapter
-import com.example.lord_of_the_rings_api.viewModel.MoviesListViewModel
-import kotlinx.android.synthetic.main.activity_movies.*
 
 class MoviesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.example.lord_of_the_rings_api.view.ui.BooksActivity
+package com.example.lord_of_the_rings_api.view.ui.books
 
 import android.os.Bundle
 import android.util.Log
