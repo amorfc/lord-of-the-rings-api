@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.service.model.Book
 import com.example.lord_of_the_rings_api.view.BaseActivity
-import com.example.lord_of_the_rings_api.view.adapter.denemeAdapter
+import com.example.lord_of_the_rings_api.view.adapter.BooksAdapter
+import com.example.lord_of_the_rings_api.view.adapter.denemelik
 import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
 import kotlinx.android.synthetic.main.activity_books.*
 
@@ -23,6 +24,7 @@ class BooksActivity : BaseActivity() {
         val booksListViewModel = ViewModelProvider(this).get(BooksListViewModel::class.java)
         observeViewModel(booksListViewModel)
     }
+
     private fun observeViewModel(viewModel: BooksListViewModel){
         viewModel.getBooksListObservable().observe(this, object : Observer<List<Book>>{
             override fun onChanged(books: List<Book>?) {
@@ -31,7 +33,7 @@ class BooksActivity : BaseActivity() {
                    booksRcy.also {
                        it.layoutManager = LinearLayoutManager(baseContext)
                        it.setHasFixedSize(true)
-                       it.adapter = denemeAdapter(books)
+                       it.adapter = denemelik(books)
                    }
                 }
             }

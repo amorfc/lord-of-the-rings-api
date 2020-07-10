@@ -4,9 +4,8 @@ import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.lord_of_the_rings_api.service.model.MovieModel.ApiResMovie
-import com.example.lord_of_the_rings_api.service.model.MovieModel.Movie
-import com.example.lord_of_the_rings_api.utils.Constants
+import com.example.lord_of_the_rings_api.service.model.ApiResMovie
+import com.example.lord_of_the_rings_api.service.model.Movie
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -24,6 +23,7 @@ class MoviesRepository : BaseRepository() {
             override fun onResponse(call: Call<ApiResMovie>, response: Response<ApiResMovie>) {
                 if (response.isSuccessful){
                     Log.e("Success Fetch Api",response.body().toString())
+                    data.value = response.body()?.docs
                 }
             }
         })

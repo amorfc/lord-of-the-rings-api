@@ -8,7 +8,7 @@ import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.service.model.Book
 import kotlinx.android.synthetic.main.books_recycler_view_item.view.*
 
-class B2ooksAdapter(var booksList:List<Book>):RecyclerView.Adapter<B2ooksAdapter.ViewHolder>(){
+class BooksAdapter(var booksList:List<Book>):RecyclerView.Adapter<BooksAdapter.ViewHolder>(){
 
     var data = listOf<Book>()
         set(value) {

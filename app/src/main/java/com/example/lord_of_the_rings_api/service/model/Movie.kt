@@ -1,4 +1,4 @@
-package com.example.lord_of_the_rings_api.service.model.MovieModel
+package com.example.lord_of_the_rings_api.service.model
 
 data class Movie(
     val _id: String,

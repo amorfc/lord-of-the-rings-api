@@ -3,7 +3,7 @@ package com.example.lord_of_the_rings_api.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.lord_of_the_rings_api.service.model.MovieModel.Movie
+import com.example.lord_of_the_rings_api.service.model.Movie
 import com.example.lord_of_the_rings_api.service.repository.MoviesRepository
 
 class MoviesListViewModel(application: Application) : AndroidViewModel(application) {
