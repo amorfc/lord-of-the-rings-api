@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/moviesListFragment3">
+    <fragment
+        android:id="@+id/moviesListFragment3"
+        android:name="com.example.lord_of_the_rings_api.view.ui.movies.MoviesListFragment"
+        android:label="Movies"
+        tools:layout="@layout/movies_list_fragment" />
+    <fragment
+        android:id="@+id/booksListFragmentNav"
+        android:name="com.example.lord_of_the_rings_api.view.ui.books.BooksListFragment"
+        android:label="Books"
+        tools:layout="@layout/books_list_fragment" />
+    <activity
+        android:id="@+id/charactersActivity"
+        android:name="com.example.lord_of_the_rings_api.view.ui.chars.CharactersActivity"
+        android:label="Characters"
+        tools:layout="@layout/activity_characters" />
+</navigation>

@@ -11,14 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".view.BottomTabBarView"
-            android:label="@string/title_activity_bottom_tab_bar_view"></activity>
         <activity android:name=".view.ui.chars.CharactersActivity" />
         <activity android:name=".view.BaseActivity" />
         <activity android:name=".view.ui.books.BooksActivity" />
-        <activity android:name=".view.ui.HomeActivity" />
-        <activity android:name=".view.ui.movies.MoviesActivity">
+        <activity android:name=".view.ui.movies.MoviesActivity" />
+        <activity android:name=".view.ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
