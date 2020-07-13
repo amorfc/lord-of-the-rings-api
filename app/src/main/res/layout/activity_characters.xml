@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.chars.CharactersActivity">
 
+    <fragment
+        android:id="@+id/charsListFragment"
+        android:name="com.example.lord_of_the_rings_api.view.ui.chars.CharsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

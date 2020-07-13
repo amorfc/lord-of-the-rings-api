@@ -1,0 +1,33 @@
+package com.example.lord_of_the_rings_api.view.ui.chars
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import com.example.lord_of_the_rings_api.R
+import com.example.lord_of_the_rings_api.viewModel.CharsListViewModel
+
+class CharsFragment : Fragment() {
+
+    companion object {
+        fun newInstance() = CharsFragment()
+    }
+
+    private lateinit var viewModel: CharsListViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.chars_list_fragment, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(CharsListViewModel::class.java)
+        // TODO: Use the ViewModel
+    }
+
+}

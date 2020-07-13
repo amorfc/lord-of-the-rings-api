@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/moviesListFragment3"
-        android:title="Movies"
+        android:id="@+id/moviesListFragmentNav"
+        android:title="@string/movies"
         android:icon="@drawable/ic_baseline_local_movies_24"
         />
     <item
-        android:id="@+id/charactersActivity"
-        android:title="Chars"
+        android:id="@+id/charsListFragmentNav"
+        android:title="@string/chars"
         android:icon="@drawable/ic_baseline_emoji_people_24"/>
     <item
         android:id="@+id/booksListFragmentNav"
-        android:title="Books"
+        android:title="@string/books"
         android:icon="@drawable/ic_baseline_menu_book_24"/>
 
 </menu>
