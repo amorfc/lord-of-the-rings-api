@@ -1,19 +1,34 @@
 package com.example.lord_of_the_rings_api.view.adapter
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lord_of_the_rings_api.R
+import com.example.lord_of_the_rings_api.databinding.CharsRecyclerViewItemBinding
+import com.example.lord_of_the_rings_api.service.model.Character
 
-class CharsAdapter(charactersList: List<Character>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class CharsAdapter(private val charactersList: List<Character>) : RecyclerView.Adapter<CharsAdapter.CharsViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        TODO("Not yet implemented")
+
+    inner class CharsViewHolder(
+        val charsRecyclerViewItemBinding: CharsRecyclerViewItemBinding
+    ) :RecyclerView.ViewHolder(charsRecyclerViewItemBinding.root)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        CharsViewHolder(
+            DataBindingUtil.inflate(
+                LayoutInflater.from(parent.context),
+                R.layout.chars_recycler_view_item,
+                parent,
+                false
+            )
+        )
+
+    override fun onBindViewHolder(holder: CharsViewHolder, position: Int) {
+        holder.charsRecyclerViewItemBinding.character = charactersList[position]
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = charactersList.size
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
-    }
 }

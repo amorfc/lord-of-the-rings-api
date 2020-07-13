@@ -22,8 +22,8 @@ class MoviesRepository : BaseRepository() {
 
             override fun onResponse(call: Call<ApiResMovie>, response: Response<ApiResMovie>) {
                 if (response.isSuccessful){
-                    Log.e("Success Fetch Api",response.body().toString())
                     data.value = response.body()?.docs
+                    Log.i("Success Fetch Api",response.toString())
                 }
             }
         })

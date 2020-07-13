@@ -1,5 +1,6 @@
 package com.example.lord_of_the_rings_api.service.repository
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -16,9 +17,9 @@ class CharactersRepository :BaseRepository(){
          var data = MutableLiveData<List<Character>>()
 
         webService.getAllCharacterFromApi().enqueue(object : Callback<ApiResCharacter> {
+            @SuppressLint("LongLogTag")
             override fun onFailure(call: Call<ApiResCharacter>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
+                Log.e("CharsList Fetching Something Went Wrong",t.toString())            }
 
             override fun onResponse(
                 call: Call<ApiResCharacter>,
@@ -26,7 +27,7 @@ class CharactersRepository :BaseRepository(){
             ) {
                 if (response.isSuccessful){
                     data.value = response.body()?.docs
-                    Log.e("Response Of CharApi",response.toString())
+                    Log.i("Response Of CharApi",response.toString())
                 }
             }
         })

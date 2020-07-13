@@ -36,7 +36,7 @@ class CharsFragment : Fragment() {
                         it.layoutManager = LinearLayoutManager(context)
                         it.setHasFixedSize(true)
 
-                        it.adapter = CharsAdapter(charactersList)
+                        it.adapter =  CharsAdapter(charactersList)
                     }
                 }
             }

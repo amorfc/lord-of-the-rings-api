@@ -10,7 +10,7 @@ import com.example.lord_of_the_rings_api.databinding.MoviesRecyclerViewItemBindi
 import com.example.lord_of_the_rings_api.service.model.Movie
 import kotlinx.android.synthetic.main.movies_recycler_view_item.view.*
 
-class MoviesAdapter(val moviesList: List<Movie> ) : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
+class MoviesAdapter(private val moviesList: List<Movie> ) : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
 
     inner class MoviesViewHolder (
             val moviesRecyclerViewItemBinding: MoviesRecyclerViewItemBinding
@@ -27,9 +27,9 @@ class MoviesAdapter(val moviesList: List<Movie> ) : RecyclerView.Adapter<MoviesA
         )
 
 
-    override fun getItemCount() = moviesList.size
 
     override fun onBindViewHolder(holder: MoviesAdapter.MoviesViewHolder, position: Int) {
         holder.moviesRecyclerViewItemBinding.movie = moviesList[position]
     }
+    override fun getItemCount() = moviesList.size
 }

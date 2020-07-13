@@ -1,5 +1,6 @@
 package com.example.lord_of_the_rings_api.service.repository
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,12 +16,14 @@ class BooksRepository :BaseRepository(){
         var data = MutableLiveData<List<Book>>()
 
         webService.getAllBooksFromApi().enqueue(object :Callback<ApiResBook>{
+            @SuppressLint("LongLogTag")
             override fun onFailure(call: Call<ApiResBook>, t: Throwable) {
-                Log.e("Something Went Wrong",t.toString())
+                Log.e("BooksListSomething Went Wrong",t.toString())
             }
             override fun onResponse(call: Call<ApiResBook>, response: Response<ApiResBook>) {
                 if (response.isSuccessful){
                     data.value = response.body()?.docs
+                    Log.i("Response of BooksApi",response.toString())
                 }
             }
 
