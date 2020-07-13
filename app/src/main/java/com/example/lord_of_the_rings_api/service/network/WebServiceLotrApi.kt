@@ -2,6 +2,7 @@ package com.example.lord_of_the_rings_api.service.network
 
 import com.example.lord_of_the_rings_api.service.model.Book
 import com.example.lord_of_the_rings_api.service.model.ApiResBook
+import com.example.lord_of_the_rings_api.service.model.ApiResCharacter
 import com.example.lord_of_the_rings_api.service.model.ApiResMovie
 import retrofit2.Call
 import retrofit2.http.GET
@@ -18,4 +19,6 @@ interface WebServiceLotrApi {
     @GET("movie")
     fun getAllMoviesFromApi():Call<ApiResMovie>
 
+    @GET("character")
+    fun getAllCharacterFromApi():Call<ApiResCharacter>
 }

@@ -5,11 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.chars.CharsFragment">
 
-    <TextView
-        android:id="@+id/charsTextView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Char Fragments"
-        android:textSize="36sp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/charsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </FrameLayout>

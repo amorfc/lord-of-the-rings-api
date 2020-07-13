@@ -7,7 +7,7 @@ import com.example.lord_of_the_rings_api.service.model.Book
 import com.example.lord_of_the_rings_api.service.repository.BooksRepository
 
 
-class BooksListViewModel(application: Application) : AndroidViewModel(application) {
+class BooksListViewModel(application: Application) : BaseViewModel(application) {
         var books  : LiveData<List<Book>>
         init {
             books= BooksRepository().getBooksList()

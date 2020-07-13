@@ -36,12 +36,12 @@ class MoviesListFragment : Fragment() {
     }
     fun observeViewModel(moviesListViewModel: MoviesListViewModel) {
         moviesListViewModel.getMovieListObservable().observe(viewLifecycleOwner,object :Observer<List<Movie>> {
-            override fun onChanged(movies: List<Movie>?) {
-                movies?.let {
+            override fun onChanged(moviesList: List<Movie>?) {
+                moviesList?.let {
                     moviesRecyclerView.also {
                         it.layoutManager = LinearLayoutManager(context)
                         it.setHasFixedSize(true)
-                        it.adapter = MoviesAdapter(movies)
+                        it.adapter = MoviesAdapter(moviesList)
                     }
                 }
             }
