@@ -25,7 +25,14 @@ class HomeActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(setOf(R.id.moviesListFragment,R.id.charsListFragment,R.id.booksListFragment))
         setupActionBarWithNavController(navController,appBarConfiguration)
 
-        bottomNavigationView.setupWithNavController(navController)
+        bottomNavigationView?.setupWithNavController(navController)
+    }
+    
+
+    fun initListeners(){
+
+
+
     }
 
 
