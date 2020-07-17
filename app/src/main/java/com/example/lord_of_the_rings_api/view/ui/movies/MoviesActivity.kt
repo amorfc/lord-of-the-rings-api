@@ -15,6 +15,7 @@ class MoviesActivity : BaseActivity() {
     /*
 
         fun observeViewModel(moviesListViewModel: MoviesListViewModel) {
+
         moviesListViewModel.getMovieListObservable().observe(this,object : Observer<List<Movie>>{
             override fun onChanged(movies: List<Movie>?) {
                 movies?.let {

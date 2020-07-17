@@ -7,7 +7,7 @@ import com.example.lord_of_the_rings_api.service.model.Movie
 import com.example.lord_of_the_rings_api.service.repository.MoviesRepository
 import com.example.lord_of_the_rings_api.view.BaseActivity
 
-class MoviesListViewModel(application: Application) : BaseViewModel(application) {
+class MoviesListViewModel() : BaseViewModel() {
         var movies : LiveData<List<Movie>>
         init {
             movies = MoviesRepository().getMoviesList()

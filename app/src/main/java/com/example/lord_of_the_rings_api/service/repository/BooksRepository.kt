@@ -12,6 +12,8 @@ import retrofit2.Response
 
 class BooksRepository :BaseRepository(){
 
+    private lateinit var selectedBooks :Book
+
     fun getBooksList():LiveData<List<Book>>{
         var data = MutableLiveData<List<Book>>()
 
@@ -31,4 +33,16 @@ class BooksRepository :BaseRepository(){
         return data
     }
 
+    fun selectBook(currentSelectedBook:Book){
+
+        selectedBooks = currentSelectedBook
+    }
+
+    fun getSelectedBooks(): LiveData<Book> {
+        var data = MutableLiveData<Book>()
+
+        data.value = selectedBooks
+
+        return  data
+    }
 }

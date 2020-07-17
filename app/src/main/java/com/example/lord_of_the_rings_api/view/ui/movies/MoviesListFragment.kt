@@ -34,8 +34,11 @@ class MoviesListFragment : Fragment() {
         moviesListViewModel = ViewModelProvider(this).get(MoviesListViewModel::class.java)
         observeViewModel(moviesListViewModel)
     }
+
     fun observeViewModel(moviesListViewModel: MoviesListViewModel) {
+
         moviesListViewModel.getMovieListObservable().observe(viewLifecycleOwner,object :Observer<List<Movie>> {
+
             override fun onChanged(moviesList: List<Movie>?) {
                 moviesList?.let {
                     moviesRecyclerView.also {

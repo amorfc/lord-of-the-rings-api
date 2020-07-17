@@ -14,10 +14,17 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
 
 
+
 class HomeActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        initNavController()
+    }
+
+    private fun initNavController(){
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
@@ -27,7 +34,6 @@ class HomeActivity : AppCompatActivity() {
 
         bottomNavigationView?.setupWithNavController(navController)
     }
-    
 
     fun initListeners(){
 

@@ -13,19 +13,10 @@
         android:id="@+id/booksListFragmentNav"
         android:name="com.example.lord_of_the_rings_api.view.ui.books.BooksListFragment"
         android:label="Books"
-        tools:layout="@layout/books_list_fragment" >
-        <action
-            android:id="@+id/action_booksListFragmentNav_to_bookDetailsFragment"
-            app:destination="@id/bookDetailsFragment" />
-    </fragment>
+        tools:layout="@layout/books_list_fragment" />
     <fragment
         android:id="@+id/charsListFragmentNav"
         android:name="com.example.lord_of_the_rings_api.view.ui.chars.CharsFragment"
         android:label="Characters"
         tools:layout="@layout/chars_list_fragment" />
-    <fragment
-        android:id="@+id/bookDetailsFragment"
-        android:name="com.example.lord_of_the_rings_api.view.ui.books.BookDetailsFragment"
-        android:label="fragment_book_details"
-        tools:layout="@layout/fragment_book_details" />
 </navigation>

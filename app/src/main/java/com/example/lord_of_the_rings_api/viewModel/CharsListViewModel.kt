@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import com.example.lord_of_the_rings_api.service.model.Character
 import com.example.lord_of_the_rings_api.service.repository.CharactersRepository
 
-class CharsListViewModel(application: Application) : BaseViewModel(application) {
+class CharsListViewModel() : BaseViewModel() {
 
     private var characters : LiveData<List<Character>> = CharactersRepository().getCharactersList()
 

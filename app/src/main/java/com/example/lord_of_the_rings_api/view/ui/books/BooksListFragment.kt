@@ -12,10 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.service.model.Book
 import com.example.lord_of_the_rings_api.view.adapter.BooksAdapter
+import com.example.lord_of_the_rings_api.view.ui.HomeActivity
 import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
 import kotlinx.android.synthetic.main.books_list_fragment.*
 
-class BooksListFragment : Fragment() {
+class BooksListFragment : Fragment(){
 
 
     private lateinit var booksListViewModel: BooksListViewModel
@@ -44,7 +45,8 @@ class BooksListFragment : Fragment() {
                     }
                 }
             }
-
         })
     }
+
+
 }
