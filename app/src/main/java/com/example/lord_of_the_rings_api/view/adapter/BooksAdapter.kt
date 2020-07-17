@@ -9,11 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.databinding.BooksRecyclerViewItemBinding
 import com.example.lord_of_the_rings_api.service.model.Book
+import com.example.lord_of_the_rings_api.service.repository.BooksRepository
 import com.example.lord_of_the_rings_api.view.ui.books.BooksDetailsActivity
+import java.nio.channels.Selector
 
 class BooksAdapter (
     private val booksList : List<Book>
 ):RecyclerView.Adapter<BooksAdapter.BooksViewHolder>(){
+
+
 
     inner class BooksViewHolder (
         val booksRecyclerViewItemBinding : BooksRecyclerViewItemBinding
@@ -29,10 +33,7 @@ class BooksAdapter (
                 false
             )
         )
-        holder.itemView.setOnClickListener {
-            val detailsIntent = Intent(parent.context,BooksDetailsActivity::class.java)
-            startActivity(detailsIntent)
-        }
+
         return holder
     }
 
@@ -41,5 +42,11 @@ class BooksAdapter (
 
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
         holder.booksRecyclerViewItemBinding.book = booksList[position]
+        holder.itemView.setOnClickListener {
+
+            BooksRepository().selectBook(booksList[position])
+            it.findNavController().navigate(R.id.action_booksListFragmentNav_to_bookDetailsFragment2)
+
+        }
     }
 }

@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,11 +17,11 @@ import com.example.lord_of_the_rings_api.view.adapter.BooksAdapter
 import com.example.lord_of_the_rings_api.view.ui.HomeActivity
 import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
 import kotlinx.android.synthetic.main.books_list_fragment.*
+import java.nio.channels.Selector
 
 class BooksListFragment : Fragment(){
 
 
-    private lateinit var booksListViewModel: BooksListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,9 +32,11 @@ class BooksListFragment : Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        booksListViewModel = ViewModelProvider(this).get(BooksListViewModel::class.java)
+
+        val booksListViewModel : BooksListViewModel by activityViewModels()
         observeViewModel(booksListViewModel)
     }
+
     private fun observeViewModel(viewModel: BooksListViewModel){
         viewModel.getBooksListObservable().observe(viewLifecycleOwner, object : Observer<List<Book>> {
             override fun onChanged(books: List<Book>?) {

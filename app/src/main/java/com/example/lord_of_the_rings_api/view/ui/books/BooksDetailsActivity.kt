@@ -16,10 +16,6 @@ class BooksDetailsActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
 
-        bookDetailsViewModel = ViewModelProvider(this).get(BookDetailsViewModel::class.java)
-        bookDetailsViewModel.getSelectedBook().observe(this, Observer {
-            detailsOfBookName1.text = it.name
-        })
     }
 
 }
