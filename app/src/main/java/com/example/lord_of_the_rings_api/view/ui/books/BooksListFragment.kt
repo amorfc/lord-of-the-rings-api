@@ -17,11 +17,10 @@ import com.example.lord_of_the_rings_api.view.adapter.BooksAdapter
 import com.example.lord_of_the_rings_api.view.ui.HomeActivity
 import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
 import kotlinx.android.synthetic.main.books_list_fragment.*
+import timber.log.Timber
 import java.nio.channels.Selector
 
 class BooksListFragment : Fragment(){
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +32,9 @@ class BooksListFragment : Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val booksListViewModel : BooksListViewModel by activityViewModels()
+        Timber.i("ViewModelProvider Created")
+        val booksListViewModel = ViewModelProvider(this).get(BooksListViewModel::class.java)
+
         observeViewModel(booksListViewModel)
     }
 
@@ -45,7 +46,7 @@ class BooksListFragment : Fragment(){
                     booksRecyclerView.also {
                         it.layoutManager = LinearLayoutManager(context)
                         it.setHasFixedSize(true)
-                        it.adapter = BooksAdapter(books)
+                        it.adapter = BooksAdapter(books,viewModel)
                     }
                 }
             }

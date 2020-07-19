@@ -1,18 +1,23 @@
 package com.example.lord_of_the_rings_api.viewModel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import android.util.Log
 import androidx.lifecycle.LiveData
 import com.example.lord_of_the_rings_api.service.model.Movie
 import com.example.lord_of_the_rings_api.service.repository.MoviesRepository
-import com.example.lord_of_the_rings_api.view.BaseActivity
 
 class MoviesListViewModel() : BaseViewModel() {
-        var movies : LiveData<List<Movie>>
-        init {
-            movies = MoviesRepository().getMoviesList()
-        }
-        fun getMovieListObservable():LiveData<List<Movie>>{
+
+    private var movies : LiveData<List<Movie>> = MoviesRepository().getMoviesList()
+
+    fun getMovieListObservable():LiveData<List<Movie>>{
             return movies
         }
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.i("MoviesListViewModel", "MoviesListViewModel destroyed!")
+    }
+    init {
+        Log.i("Info","MoviesListViewModel Created")
+    }
 }
