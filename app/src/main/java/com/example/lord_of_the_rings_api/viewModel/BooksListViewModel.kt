@@ -9,12 +9,17 @@ import com.example.lord_of_the_rings_api.service.repository.BooksRepository
 
 
 class BooksListViewModel() : BaseViewModel() {
+
         var books  : LiveData<List<Book>> = BooksRepository().getBooksList()
 
         private val selected = MutableLiveData<Book>()
 
         fun select(book: Book) {
                 selected.value = book
+        }
+
+        fun getSelectedObservable(): LiveData<Book>{
+                return selected
         }
 
         fun getBooksListObservable(): LiveData<List<Book>>{

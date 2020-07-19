@@ -33,17 +33,4 @@ class BooksRepository : BaseRepository() {
         })
         return data
     }
-
-    fun selectBook(currentSelectedBook: Book) {
-
-        selectedBooks = currentSelectedBook
-    }
-
-    fun getSelectedBooks(): LiveData<Book> {
-        var data = MutableLiveData<Book>()
-
-        data.value = selectedBooks
-
-        return data
-    }
 }

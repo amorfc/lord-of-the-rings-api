@@ -2,6 +2,7 @@ package com.example.lord_of_the_rings_api.view.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -11,6 +12,8 @@ import com.example.lord_of_the_rings_api.databinding.BooksRecyclerViewItemBindin
 import com.example.lord_of_the_rings_api.service.model.Book
 import com.example.lord_of_the_rings_api.service.repository.BooksRepository
 import com.example.lord_of_the_rings_api.view.ui.books.BooksDetailsActivity
+import com.example.lord_of_the_rings_api.viewModel.BookDetailsViewModel
+import com.example.lord_of_the_rings_api.viewModel.BooksListViewModel
 import java.nio.channels.Selector
 
 class BooksAdapter (
@@ -44,9 +47,7 @@ class BooksAdapter (
         holder.booksRecyclerViewItemBinding.book = booksList[position]
         holder.itemView.setOnClickListener {
 
-            BooksRepository().selectBook(booksList[position])
             it.findNavController().navigate(R.id.action_booksListFragmentNav_to_bookDetailsFragment2)
-
         }
     }
 }

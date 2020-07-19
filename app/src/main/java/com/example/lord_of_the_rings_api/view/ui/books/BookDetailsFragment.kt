@@ -27,8 +27,5 @@ class BookDetailsFragment : Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         bookDetailsViewModel = BookDetailsViewModel()
-        bookDetailsViewModel.getSelectedBook().observe(viewLifecycleOwner, Observer {
-            bookDetailsName.text = it.name
-        })
     }
 }

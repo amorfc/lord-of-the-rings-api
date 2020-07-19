@@ -2,11 +2,13 @@ package com.example.lord_of_the_rings_api.view.ui
 
 import android.os.Bundle
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.lord_of_the_rings_api.R
@@ -21,19 +23,16 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        initNavController()
+        val navController = this.findNavController(R.id.navHostFragment)
+        setupActionBarWithNavController(navController)
+
+        findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+            .setupWithNavController(navController)
+
     }
 
-    private fun initNavController(){
+    override fun onSupportNavigateUp() = findNavController(R.id.navHostFragment).navigateUp()
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        val navController = findNavController(R.id.fragment)
-
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.moviesListFragment,R.id.booksListFragment,R.id.charsListFragment))
-        setupActionBarWithNavController(navController,appBarConfiguration)
-
-        bottomNavigationView?.setupWithNavController(navController)
-    }
 
     fun initListeners(){
 
