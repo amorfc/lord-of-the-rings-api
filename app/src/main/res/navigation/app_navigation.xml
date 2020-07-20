@@ -15,9 +15,12 @@
         android:label="Books"
         tools:layout="@layout/books_list_fragment" >
         <action
-            android:id="@+id/action_booksListFragmentNav_to_bookDetailsFragment2"
-            app:destination="@id/bookDetailsFragment"
-            app:popUpTo="@id/booksListFragmentNav" />
+            android:id="@+id/action_booksListFragmentNav_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+        <argument
+            android:name="selectedBook"
+            app:argType="com.example.lord_of_the_rings_api.service.model.Book" />
+
     </fragment>
     <fragment
         android:id="@+id/charsListFragmentNav"

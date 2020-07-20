@@ -1,13 +1,11 @@
-package com.example.lord_of_the_rings_api.viewModel
+package com.example.lord_of_the_rings_api.viewModel.books
 
-import android.app.Application
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.lord_of_the_rings_api.service.model.Book
 import com.example.lord_of_the_rings_api.service.repository.BooksRepository
-import timber.log.Timber
+import com.example.lord_of_the_rings_api.viewModel.BaseViewModel
 
 
 class BooksListViewModel() : BaseViewModel() {
@@ -21,10 +19,6 @@ class BooksListViewModel() : BaseViewModel() {
 
         fun getBookObservable(): LiveData<Book>{
                 return selectedBook
-        }
-
-        fun selectABook(_selectedBook: Book){
-                selectedBook.value =  _selectedBook
         }
 
         override fun onCleared() {
