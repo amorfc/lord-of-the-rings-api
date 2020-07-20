@@ -15,4 +15,9 @@
     <string name="budgetMovie">Budget(Million)</string>
     <string name="revenue">Renevue(Million)</string>
     <string name="time">Time(Minutes)</string>
+    <string name="gender">Gender</string>
+    <string name="race">Race</string>
+    <string name="birth">Birth</string>
+    <string name="death" />
+    <string name="deathh">Death</string>
 </resources>

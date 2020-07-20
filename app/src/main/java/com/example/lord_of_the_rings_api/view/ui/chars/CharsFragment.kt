@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.service.model.Character
@@ -32,7 +33,7 @@ class CharsFragment : Fragment() {
             override fun onChanged(charactersList: List<Character>?) {
                 charactersList?.let {
                     charsRecyclerView.also {
-                        it.layoutManager = LinearLayoutManager(context)
+                        it.layoutManager = GridLayoutManager(context,3)
                         it.setHasFixedSize(true)
                         it.adapter =  CharsAdapter(charactersList)
                     }

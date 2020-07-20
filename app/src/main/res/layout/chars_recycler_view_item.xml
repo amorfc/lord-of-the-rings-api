@@ -12,13 +12,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/charsRecyclerViewItemLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/charlayoutborder">
 
         <TextView
             android:id="@+id/charsNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
+            android:gravity="center"
             android:text="@{character.name}"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/charsInfView"
@@ -30,8 +33,10 @@
             android:id="@+id/charsInfView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@{character.gender}"
             android:textSize="30sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

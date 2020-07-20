@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation"
-    app:startDestination="@id/moviesListFragmentNav">
+    app:startDestination="@id/charsListFragmentNav">
     <fragment
         android:id="@+id/moviesListFragmentNav"
         android:name="com.example.lord_of_the_rings_api.view.ui.movies.MoviesListFragment"
         android:label="Movies"
-        tools:layout="@layout/movies_list_fragment" >
+        tools:layout="@layout/movies_list_fragment">
         <action
             android:id="@+id/action_moviesListFragmentNav_to_moviesDetailsFragment"
             app:destination="@id/moviesDetailsFragment" />
@@ -20,7 +20,7 @@
         android:id="@+id/booksListFragmentNav"
         android:name="com.example.lord_of_the_rings_api.view.ui.books.BooksListFragment"
         android:label="Books"
-        tools:layout="@layout/books_list_fragment" >
+        tools:layout="@layout/books_list_fragment">
         <action
             android:id="@+id/action_booksListFragmentNav_to_bookDetailsFragment"
             app:destination="@id/bookDetailsFragment" />
@@ -33,7 +33,7 @@
         android:id="@+id/charsListFragmentNav"
         android:name="com.example.lord_of_the_rings_api.view.ui.chars.CharsFragment"
         android:label="Characters"
-        tools:layout="@layout/chars_list_fragment" >
+        tools:layout="@layout/chars_list_fragment">
         <action
             android:id="@+id/action_charsListFragmentNav_to_charsDetailsFragment"
             app:destination="@id/charsDetailsFragment" />
