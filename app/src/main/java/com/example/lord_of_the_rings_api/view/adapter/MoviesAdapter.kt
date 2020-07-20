@@ -3,7 +3,9 @@ package com.example.lord_of_the_rings_api.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.databinding.MoviesRecyclerViewItemBinding
@@ -29,7 +31,13 @@ class MoviesAdapter(private val moviesList: List<Movie> ) : RecyclerView.Adapter
 
 
     override fun onBindViewHolder(holder: MoviesAdapter.MoviesViewHolder, position: Int) {
-        holder.moviesRecyclerViewItemBinding.movie = moviesList[position]
+
+        val currentItem : Movie= moviesList[position]
+        holder.moviesRecyclerViewItemBinding.movie = currentItem
+        holder.itemView.setOnClickListener {
+            val bundle = bundleOf("selectedMovie" to currentItem)
+            it.findNavController().navigate(R.id.action_moviesListFragmentNav_to_moviesDetailsFragment,bundle)
+        }
     }
     override fun getItemCount() = moviesList.size
 }
