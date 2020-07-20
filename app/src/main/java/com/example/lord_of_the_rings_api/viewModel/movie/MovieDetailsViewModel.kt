@@ -1,7 +1,6 @@
 package com.example.lord_of_the_rings_api.viewModel.movie
 
 import android.util.Log
-import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.service.model.Movie
 import com.example.lord_of_the_rings_api.viewModel.BaseViewModel
 
