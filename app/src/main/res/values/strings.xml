@@ -12,4 +12,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="moviDefVal">Lord Of The Rings</string>
     <string name="awards">Awards</string>
+    <string name="budgetMovie">Budget(Million)</string>
+    <string name="revenue">Renevue(Million)</string>
+    <string name="time">Time(Minutes)</string>
 </resources>

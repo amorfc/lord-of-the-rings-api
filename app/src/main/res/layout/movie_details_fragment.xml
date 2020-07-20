@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:gravity="center"
@@ -37,39 +37,38 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_height="360dp"
             android:layout_marginTop="4dp"
             android:scaleType="centerCrop"
             android:src="@drawable/smaug"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/academyAwardWinsTV" />
+            app:layout_constraintTop_toBottomOf="@+id/academyAwardWinsTV"
+            android:contentDescription="Image from Code Side" />
 
         <TextView
             android:id="@+id/budgetInMillionsTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
             android:text="@{String.valueOf(movieDetailsViewModel.selectedMovie.budgetInMillions)}"
             android:textSize="30sp"
-            app:layout_constraintEnd_toStartOf="@+id/boxOfficeRevenueInMillionsTW"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
 
         <TextView
-            android:id="@+id/boxOfficeRevenueInMillionsTW"
+            android:id="@+id/runtimeInMinutesTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="160dp"
-            android:layout_marginRight="160dp"
-            android:text="@{String.valueOf(movieDetailsViewModel.selectedMovie.boxOfficeRevenueInMillions)}"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="44dp"
+            android:text="@{String.valueOf(movieDetailsViewModel.selectedMovie.runtimeInMinutes)}"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/budgetInMillionsTV" />
 
         <TextView
             android:id="@+id/academyAwardWinsTV"
@@ -86,15 +85,17 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
-            android:id="@+id/runtimeInMinutesTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{String.valueOf(movieDetailsViewModel.selectedMovie.runtimeInMinutes)}"
+            android:id="@+id/boxOfficeRevenueInMillionsTW"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="52dp"
+            android:text="@{String.valueOf(movieDetailsViewModel.selectedMovie.boxOfficeRevenueInMillions)}"
             android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.535"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/runtimeInMinutesTV" />
 
         <TextView
             android:id="@+id/textView6"
@@ -108,6 +109,47 @@
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="@+id/academyAwardWinsTV"
             app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/revenue"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/budgetMovie"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/time"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.433"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
