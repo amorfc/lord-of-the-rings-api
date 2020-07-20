@@ -1,9 +1,10 @@
-package com.example.lord_of_the_rings_api.viewModel
+package com.example.lord_of_the_rings_api.viewModel.chars
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import com.example.lord_of_the_rings_api.service.model.Character
 import com.example.lord_of_the_rings_api.service.repository.CharactersRepository
+import com.example.lord_of_the_rings_api.viewModel.BaseViewModel
 
 class CharsListViewModel() : BaseViewModel() {
 

@@ -40,10 +40,11 @@ class BooksAdapter (
     override fun getItemCount() = booksList.size
 
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
-        holder.booksRecyclerViewItemBinding.book = booksList[position]
+        val currentItem :Book = booksList[position]
+        holder.booksRecyclerViewItemBinding.book = currentItem
         holder.itemView.setOnClickListener {
 
-            val bundle = bundleOf("selectedBook" to booksList[position])
+            val bundle = bundleOf("selectedBook" to currentItem)
             it.findNavController().navigate(R.id.action_booksListFragmentNav_to_bookDetailsFragment,bundle)
 
         }

@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -30,9 +31,12 @@ class CharsAdapter(private val charactersList: List<Character>) : RecyclerView.A
         )
 
     override fun onBindViewHolder(holder: CharsViewHolder, position: Int) {
-
-        holder.charsRecyclerViewItemBinding.character = charactersList[position]
-
+        val currentItem : Character =  charactersList[position]
+        holder.charsRecyclerViewItemBinding.character = currentItem
+        holder.itemView.setOnClickListener {
+            val bundle = bundleOf("selectedChar" to currentItem)
+            it.findNavController().navigate(R.id.action_charsListFragmentNav_to_charsDetailsFragment,bundle)
+        }
     }
 
     override fun getItemCount() = charactersList.size

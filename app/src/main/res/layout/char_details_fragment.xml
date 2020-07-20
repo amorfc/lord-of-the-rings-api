@@ -4,21 +4,19 @@
 
     <data>
         <variable
-            name="bookDetailsViewModel"
-            type="com.example.lord_of_the_rings_api.viewModel.books.BookDetailsViewModel" />
+            name="charDetailsViewModel"
+            type="com.example.lord_of_the_rings_api.viewModel.chars.CharDetailsViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.ui.books.BookDetailsFragment">
+        tools:context=".view.ui.chars.CharDetailsFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
-            android:id="@+id/bookDetailsName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@{bookDetailsViewModel.selectedBook.name}" />
+            android:text="Hello" />
 
     </FrameLayout>
 </layout>

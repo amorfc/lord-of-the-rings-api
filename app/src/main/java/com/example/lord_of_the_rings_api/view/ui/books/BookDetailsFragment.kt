@@ -14,7 +14,7 @@ import com.example.lord_of_the_rings_api.viewModel.books.BookDetailsViewModelFac
 class BookDetailsFragment : Fragment(){
 
     private lateinit var bookDetailsBinding : FragmentBookDetailsBinding
-    private lateinit var bookDetailsViewModel: BookDetailsViewModel
+    private lateinit var detailsViewModel: BookDetailsViewModel
     private lateinit var bookDetailsViewModelFactory: BookDetailsViewModelFactory
 
     override fun onCreateView(
@@ -33,8 +33,8 @@ class BookDetailsFragment : Fragment(){
 
         val arg:Book? = arguments?.getParcelable("selectedBook")
         bookDetailsViewModelFactory = BookDetailsViewModelFactory(arg!!)
-        bookDetailsViewModel = ViewModelProvider(this,bookDetailsViewModelFactory).get(BookDetailsViewModel::class.java)
-        bookDetailsBinding.viewModel = bookDetailsViewModel
+        detailsViewModel = ViewModelProvider(this,bookDetailsViewModelFactory).get(BookDetailsViewModel::class.java)
+        bookDetailsBinding.bookDetailsViewModel = detailsViewModel
 
 
     }

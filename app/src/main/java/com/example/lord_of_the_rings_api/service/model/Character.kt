@@ -1,5 +1,10 @@
 package com.example.lord_of_the_rings_api.service.model
 
+import android.os.Parcelable
+import androidx.annotation.Keep
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize @Keep
 data class Character(
     val _id: String,
     val birth: String,
@@ -12,4 +17,4 @@ data class Character(
     val realm: String,
     val spouse: String,
     val wikiUrl: String
-)
+) : Parcelable
