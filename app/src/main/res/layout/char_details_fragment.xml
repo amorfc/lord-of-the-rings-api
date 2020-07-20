@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@{charDetailsViewModel.selectedCharacter.name}"
-            android:textSize="44sp"
+            android:textSize="62sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,11 +29,11 @@
             android:id="@+id/genderTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="140dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
             android:text="@string/gender"
-            android:textSize="40sp"
+            android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,8 +44,8 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            android:text="@string/gender"
-            android:textSize="40sp"
+            android:text="@string/spouse"
+            android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -55,9 +55,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="140dp"
             android:text="@string/race"
-            android:textSize="40sp"
+            android:textSize="50sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,8 +68,8 @@
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="40dp"
-            android:text="@string/race"
-            android:textSize="40sp"
+            android:text="@string/realm"
+            android:textSize="50sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -81,15 +81,29 @@
             android:layout_marginLeft="72dp"
             android:layout_marginTop="50dp"
             android:text="@string/birth"
-            android:textSize="40sp"
+            android:textSize="50sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="@{charDetailsViewModel.selectedCharacter.wikiUrl}"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/genderTV6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
+            android:text="@string/extn"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="@+id/genderTV5"
             app:layout_constraintEnd_toStartOf="@+id/genderTV5"
@@ -104,7 +118,7 @@
             android:layout_marginEnd="72dp"
             android:layout_marginRight="72dp"
             android:text="@string/deathh"
-            android:textSize="40sp"
+            android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -129,6 +143,7 @@
             android:text="@{charDetailsViewModel.selectedCharacter.spouse}"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/genderTV"
             app:layout_constraintTop_toBottomOf="@+id/genderTV7" />
 
@@ -147,9 +162,7 @@
             android:layout_height="wrap_content"
             android:text="@{charDetailsViewModel.selectedCharacter.birth}"
             android:textSize="32sp"
-            app:layout_constraintEnd_toEndOf="@+id/genderTV4"
-            app:layout_constraintHorizontal_bias="0.458"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/genderTV4"
             app:layout_constraintTop_toBottomOf="@+id/genderTV4" />
 
         <TextView
@@ -158,7 +171,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="45dp"
             android:layout_marginLeft="45dp"
-            android:text="@{charDetailsViewModel.selectedCharacter.gender}"
+            android:text="@{charDetailsViewModel.selectedCharacter.race}"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="@+id/genderTV2"
             app:layout_constraintStart_toStartOf="parent"
@@ -170,10 +183,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="45dp"
             android:layout_marginLeft="45dp"
-            android:text="@{charDetailsViewModel.selectedCharacter.spouse}"
+            android:text="@{charDetailsViewModel.selectedCharacter.realm}"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="@+id/genderTV2"
-            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_bias="0.949"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/genderTV3" />
 

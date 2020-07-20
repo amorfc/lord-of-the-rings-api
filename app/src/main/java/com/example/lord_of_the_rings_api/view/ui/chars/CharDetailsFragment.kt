@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.lord_of_the_rings_api.databinding.CharDetailsFragmentBinding
 import com.example.lord_of_the_rings_api.viewModel.chars.CharDetailsViewModel
 import com.example.lord_of_the_rings_api.viewModel.chars.CharDetailsViewModelFactory
+import kotlinx.android.synthetic.main.char_details_fragment.*
 
 class CharDetailsFragment : Fragment() {
 
@@ -28,7 +29,9 @@ class CharDetailsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         charDetailsViewModelFactory = CharDetailsViewModelFactory(CharsFragmentArgs.fromBundle(requireArguments()).selectedChar)
+
         detailsViewModel = ViewModelProvider(this,charDetailsViewModelFactory).get(CharDetailsViewModel::class.java)
+
         charDetailsFragmentBinding.charDetailsViewModel = detailsViewModel
     }
 

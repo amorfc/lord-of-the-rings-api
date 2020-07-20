@@ -20,4 +20,8 @@
     <string name="birth">Birth</string>
     <string name="death" />
     <string name="deathh">Death</string>
+    <string name="realm">Realm</string>
+    <string name="spouse">Spouse</string>
+    <string name="link">"...more "</string>
+    <string name="extn">-</string>
 </resources>
