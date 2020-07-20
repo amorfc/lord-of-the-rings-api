@@ -18,16 +18,9 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="64dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:singleLine="false"
             android:text="@{movieDetailsViewModel.selectedMovie.name}"
-            android:textSize="46sp"
-            android:textStyle="bold"
+            android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.569"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,15 +29,15 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="4dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/smaug"
+            android:layout_width="196dp"
+            android:layout_height="203dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/academyAwardWinsTV" />
+            app:layout_constraintTop_toBottomOf="@+id/academyAwardWinsTV"
+            tools:srcCompat="@drawable/ic_launcher_foreground" />
 
         <TextView
             android:id="@+id/budgetInMillionsTV"
@@ -75,13 +68,11 @@
             android:id="@+id/academyAwardWinsTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="40dp"
             android:text="@{String.valueOf(movieDetailsViewModel.selectedMovie.academyAwardWins)}"
-            android:textColor="#292822"
-            android:textSize="46sp"
-            android:textStyle="bold"
+            android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.039"
+            app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toEndOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -100,12 +91,11 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
             android:layout_marginBottom="8dp"
             android:text="@string/awards"
-            android:textSize="36sp"
-            android:textStyle="bold|italic"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/academyAwardWinsTV"
             app:layout_constraintStart_toStartOf="@+id/imageView" />
 
