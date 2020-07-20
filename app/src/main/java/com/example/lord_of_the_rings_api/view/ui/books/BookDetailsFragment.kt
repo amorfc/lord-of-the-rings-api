@@ -31,8 +31,7 @@ class BookDetailsFragment : Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val arg:Book? = arguments?.getParcelable("selectedBook")
-        bookDetailsViewModelFactory = BookDetailsViewModelFactory(arg!!)
+        bookDetailsViewModelFactory = BookDetailsViewModelFactory(BooksListFragmentArgs.fromBundle(requireArguments()).selectedBook)
         detailsViewModel = ViewModelProvider(this,bookDetailsViewModelFactory).get(BookDetailsViewModel::class.java)
         bookDetailsBinding.bookDetailsViewModel = detailsViewModel
 

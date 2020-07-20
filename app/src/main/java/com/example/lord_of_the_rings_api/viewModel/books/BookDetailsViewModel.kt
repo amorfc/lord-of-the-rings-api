@@ -9,7 +9,7 @@ class BookDetailsViewModel(book: Book) :BaseViewModel() {
     var selectedBook :Book = book
 
     init {
-        Log.i("HEHEHEHE","BookDetailsViewModelCreated")
+        Log.i("Info","BookDetailsViewModelCreated")
     }
 
 }

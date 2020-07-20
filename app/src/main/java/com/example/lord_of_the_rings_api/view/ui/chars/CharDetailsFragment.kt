@@ -1,21 +1,20 @@
 package com.example.lord_of_the_rings_api.view.ui.chars
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.lord_of_the_rings_api.R
 import com.example.lord_of_the_rings_api.databinding.CharDetailsFragmentBinding
 import com.example.lord_of_the_rings_api.viewModel.chars.CharDetailsViewModel
+import com.example.lord_of_the_rings_api.viewModel.chars.CharDetailsViewModelFactory
 
 class CharDetailsFragment : Fragment() {
 
-    private lateinit var viewModel: CharDetailsViewModel
+    private lateinit var detailsViewModel: CharDetailsViewModel
     private lateinit var charDetailsFragmentBinding: CharDetailsFragmentBinding
-
+    private lateinit var charDetailsViewModelFactory: CharDetailsViewModelFactory
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,8 +26,10 @@ class CharDetailsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(CharDetailsViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        charDetailsViewModelFactory = CharDetailsViewModelFactory(CharsFragmentArgs.fromBundle(requireArguments()).selectedChar)
+        detailsViewModel = ViewModelProvider(this,charDetailsViewModelFactory).get(CharDetailsViewModel::class.java)
+        charDetailsFragmentBinding.charDetailsViewModel = detailsViewModel
     }
 
 }
