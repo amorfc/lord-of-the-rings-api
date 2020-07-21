@@ -19,8 +19,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:gravity="center"
             android:text="@{charDetailsViewModel.selectedCharacter.name}"
             android:textSize="58sp"
+            android:textStyle="bold"
+            app:fontFamily="cursive"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,6 +37,7 @@
             android:layout_marginRight="15dp"
             android:text="@string/gender"
             android:textSize="50sp"
+            app:fontFamily="serif-monospace"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,6 +50,7 @@
             android:layout_marginRight="15dp"
             android:text="@string/spouse"
             android:textSize="50sp"
+            app:fontFamily="serif-monospace"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -58,6 +63,7 @@
             android:layout_marginTop="140dp"
             android:text="@string/race"
             android:textSize="50sp"
+            app:fontFamily="serif-monospace"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,6 +76,7 @@
             android:layout_marginTop="40dp"
             android:text="@string/realm"
             android:textSize="50sp"
+            app:fontFamily="serif-monospace"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -82,6 +89,7 @@
             android:layout_marginTop="50dp"
             android:text="@string/birth"
             android:textSize="50sp"
+            app:fontFamily="serif-monospace"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -92,6 +100,7 @@
             android:layout_marginBottom="4dp"
             android:text="@string/link"
             android:textSize="50sp"
+            app:fontFamily="monospace"
             app:layout_constraintBottom_toTopOf="@+id/link"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -105,6 +114,7 @@
             android:linksClickable="true"
             android:text="@{charDetailsViewModel.selectedCharacter.wikiUrl}"
             android:textSize="24dp"
+            app:fontFamily="serif-monospace"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/genderTV8"
             app:layout_constraintStart_toStartOf="@+id/genderTV8" />
@@ -129,6 +139,7 @@
             android:layout_marginRight="72dp"
             android:text="@string/deathh"
             android:textSize="50sp"
+            app:fontFamily="serif-monospace"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -139,7 +150,10 @@
             android:layout_marginEnd="45dp"
             android:layout_marginRight="45dp"
             android:text="@{charDetailsViewModel.selectedCharacter.gender}"
-            android:textSize="32sp"
+            android:textSize="38sp"
+            android:maxWidth="220dp"
+            android:textStyle="bold"
+            app:fontFamily="cursive"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/genderTV"
             app:layout_constraintTop_toBottomOf="@+id/genderTV" />
@@ -148,9 +162,16 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center_horizontal"
             android:text="@{charDetailsViewModel.selectedCharacter.spouse}"
-            android:textSize="32sp"
+            android:textSize="38sp"
+            android:maxWidth="220dp"
+            android:textStyle="bold"
+            app:fontFamily="cursive"
             app:layout_constraintEnd_toEndOf="@+id/genderTV7"
+            app:layout_constraintHorizontal_bias="0.385"
             app:layout_constraintStart_toStartOf="@+id/genderTV7"
             app:layout_constraintTop_toBottomOf="@+id/genderTV7" />
 
@@ -159,7 +180,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{charDetailsViewModel.selectedCharacter.death}"
-            android:textSize="32sp"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:fontFamily="cursive"
+            android:maxWidth="220dp"
             app:layout_constraintEnd_toEndOf="@+id/genderTV5"
             app:layout_constraintStart_toStartOf="@+id/genderTV5"
             app:layout_constraintTop_toBottomOf="@+id/genderTV5" />
@@ -168,8 +192,13 @@
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:maxWidth="220dp"
             android:text="@{charDetailsViewModel.selectedCharacter.birth}"
-            android:textSize="32sp"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:fontFamily="cursive"
             app:layout_constraintEnd_toEndOf="@+id/genderTV4"
             app:layout_constraintStart_toStartOf="@+id/genderTV4"
             app:layout_constraintTop_toBottomOf="@+id/genderTV4" />
@@ -181,7 +210,10 @@
             android:layout_marginStart="45dp"
             android:layout_marginLeft="45dp"
             android:text="@{charDetailsViewModel.selectedCharacter.race}"
-            android:textSize="32sp"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:maxWidth="220dp"
+            app:fontFamily="cursive"
             app:layout_constraintEnd_toEndOf="@+id/genderTV2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/genderTV2" />
@@ -191,7 +223,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{charDetailsViewModel.selectedCharacter.realm}"
-            android:textSize="32sp"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:maxWidth="220dp"
+            app:fontFamily="cursive"
             app:layout_constraintEnd_toEndOf="@+id/genderTV3"
             app:layout_constraintStart_toStartOf="@+id/genderTV3"
             app:layout_constraintTop_toBottomOf="@+id/genderTV3" />
