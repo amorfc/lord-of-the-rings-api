@@ -33,7 +33,7 @@ class CharsFragment : Fragment() {
             override fun onChanged(charactersList: List<Character>?) {
                 charactersList?.let {
                     charsRecyclerView.also {
-                        it.layoutManager = GridLayoutManager(context,3)
+                        it.layoutManager = GridLayoutManager(context,2)
                         it.setHasFixedSize(true)
                         it.adapter =  CharsAdapter(charactersList)
                     }
