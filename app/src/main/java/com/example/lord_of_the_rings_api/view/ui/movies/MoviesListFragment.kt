@@ -31,6 +31,7 @@ class MoviesListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         moviesListViewModel = ViewModelProvider(this).get(MoviesListViewModel::class.java)
         observeViewModel(moviesListViewModel)
     }
@@ -42,6 +43,7 @@ class MoviesListFragment : Fragment() {
             override fun onChanged(moviesList: List<Movie>?) {
                 moviesList?.let {
                     moviesRecyclerView.also {
+                        progressBar.visibility = View.GONE
                         it.layoutManager = LinearLayoutManager(context)
                         it.setHasFixedSize(true)
                         it.adapter = MoviesAdapter(moviesList)

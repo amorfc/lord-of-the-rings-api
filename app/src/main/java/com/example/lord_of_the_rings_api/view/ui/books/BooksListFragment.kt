@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isGone
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,6 +39,7 @@ class BooksListFragment : Fragment(){
         viewModel.getBooksListObservable().observe(viewLifecycleOwner, object : Observer<List<Book>> {
             override fun onChanged(books: List<Book>?) {
                 books?.let{
+                    progressBarBookList.visibility = View.GONE
                     Log.e("Results",it.toString())
                     booksRecyclerView.also {
                         it.layoutManager = LinearLayoutManager(context)

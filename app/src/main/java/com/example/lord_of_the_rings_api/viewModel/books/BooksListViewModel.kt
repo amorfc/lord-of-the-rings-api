@@ -11,15 +11,11 @@ import com.example.lord_of_the_rings_api.viewModel.BaseViewModel
 class BooksListViewModel() : BaseViewModel() {
 
         private var books  : LiveData<List<Book>> = BooksRepository().getBooksList()
-        private var selectedBook = MutableLiveData<Book>()
 
         fun getBooksListObservable(): LiveData<List<Book>>{
                 return books
         }
 
-        fun getBookObservable(): LiveData<Book>{
-                return selectedBook
-        }
 
         override fun onCleared() {
                 super.onCleared()
@@ -28,4 +24,5 @@ class BooksListViewModel() : BaseViewModel() {
         init {
             Log.i("Info","BooksListViewModel Created")
         }
+
 }

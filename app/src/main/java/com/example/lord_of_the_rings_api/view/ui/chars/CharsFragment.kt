@@ -1,6 +1,7 @@
 package com.example.lord_of_the_rings_api.view.ui.chars
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -23,6 +24,7 @@ class CharsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        Log.i("CharsFragmentCreated " , "CharsFragmentCreated" )
         return inflater.inflate(R.layout.chars_list_fragment, container, false)
     }
 
@@ -33,6 +35,7 @@ class CharsFragment : Fragment() {
             override fun onChanged(charactersList: List<Character>?) {
                 charactersList?.let {
                     charsRecyclerView.also {
+                        progressBar2.visibility= View.GONE
                         it.layoutManager = GridLayoutManager(context,2)
                         it.setHasFixedSize(true)
                         it.adapter =  CharsAdapter(charactersList)
