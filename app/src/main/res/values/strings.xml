@@ -22,6 +22,6 @@
     <string name="deathh">Death</string>
     <string name="realm">Realm</string>
     <string name="spouse">Spouse</string>
-    <string name="link">"...more "</string>
+    <string name="link">click for more...</string>
     <string name="extn">-</string>
 </resources>
