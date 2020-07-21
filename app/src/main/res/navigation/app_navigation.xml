@@ -2,8 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/app_navigation"
-    app:startDestination="@id/charsListFragmentNav">
+    android:id="@+id/apgation"
+    app:startDestination="@id/booksListFragmentNav">
     <fragment
         android:id="@+id/moviesListFragmentNav"
         android:name="com.example.lord_of_the_rings_api.view.ui.movies.MoviesListFragment"
@@ -44,16 +44,16 @@
     <fragment
         android:id="@+id/bookDetailsFragment"
         android:name="com.example.lord_of_the_rings_api.view.ui.books.BookDetailsFragment"
-        android:label="fragment_book_details"
+        android:label="Details"
         tools:layout="@layout/fragment_book_details" />
     <fragment
         android:id="@+id/moviesDetailsFragment"
         android:name="com.example.lord_of_the_rings_api.view.ui.movies.MovieDetailsFragment"
-        android:label="movies_details_fragment"
+        android:label="Details"
         tools:layout="@layout/movie_details_fragment" />
     <fragment
         android:id="@+id/charsDetailsFragment"
         android:name="com.example.lord_of_the_rings_api.view.ui.chars.CharDetailsFragment"
-        android:label="chars_details_fragment"
+        android:label="Details"
         tools:layout="@layout/char_details_fragment" />
 </navigation>

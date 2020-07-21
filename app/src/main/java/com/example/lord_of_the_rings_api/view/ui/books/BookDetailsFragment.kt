@@ -32,7 +32,9 @@ class BookDetailsFragment : Fragment(){
         super.onActivityCreated(savedInstanceState)
 
         bookDetailsViewModelFactory = BookDetailsViewModelFactory(BooksListFragmentArgs.fromBundle(requireArguments()).selectedBook)
+
         detailsViewModel = ViewModelProvider(this,bookDetailsViewModelFactory).get(BookDetailsViewModel::class.java)
+
         bookDetailsBinding.bookDetailsViewModel = detailsViewModel
 
 

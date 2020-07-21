@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -8,17 +9,32 @@
             type="com.example.lord_of_the_rings_api.viewModel.books.BookDetailsViewModel" />
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.ui.books.BookDetailsFragment">
+        tools:context=".view.ui.books.BookDetailsFragment"
+        android:background="@drawable/oldbook">
 
         <!-- TODO: Update blank fragment layout -->
+
         <TextView
             android:id="@+id/bookDetailsName"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@{bookDetailsViewModel.selectedBook.name}" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@{bookDetailsViewModel.selectedBook.name}"
+            android:textColor="#9CDFD738"
+            android:textSize="60sp"
+            app:fontFamily="cursive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.348" />
 
-    </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
